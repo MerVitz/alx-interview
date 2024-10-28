@@ -1,10 +1,15 @@
 #!/usr/bin/python3
+"""
+0-pascal_triangle.py
+Return a empty list if n <=0
+Initialize the triangle as an empty list
+"""
 def pascal_triangle(n):
     """Generate Pascal's Triangle with n rows."""
     if n <= 0:
-        return []  # Return an empty list if n is less than or equal to 0
+        return []
 
-    triangle = []  # Initialize the triangle as an empty list
+    triangle = []
 
     for i in range(n):
         # Start each row with 1
