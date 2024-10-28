@@ -4,6 +4,7 @@
 Defines a function that generates Pascal's Triangle.
 """
 
+
 def pascal_triangle(n):
     """Generate Pascal's Triangle with n rows."""
     if n <= 0:
