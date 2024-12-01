@@ -7,7 +7,8 @@ using only Copy All and Paste operations.
 
 def minOperations(n):
     """
-    Calculates the fewest number of operations needed to result in exactly n H characters.
+    Calculates the fewest number of operations needed to result in exactly
+    n H characters.
 
     Parameters:
         n (int): The target number of characters.
