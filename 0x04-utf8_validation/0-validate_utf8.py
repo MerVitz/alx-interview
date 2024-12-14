@@ -40,5 +40,6 @@ def validUTF8(data):
                 return False
             bytes_to_process -= 1
 
-    # If all characters are processed and no bytes are left to process, it's valid
+    # If all characters are processed and
+    #no bytes are left to process, it's valid
     return bytes_to_process == 0
