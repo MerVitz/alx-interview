@@ -7,6 +7,7 @@ Script that reads stdin line by line and computes metrics:
 
 import sys
 
+
 def print_stats(total_size, status_counts):
     """
     Print the cumulative file size and status code counts
@@ -14,6 +15,7 @@ def print_stats(total_size, status_counts):
     print(f"File size: {total_size}")
     for code in sorted(status_counts.keys()):
         print(f"{code}: {status_counts[code]}")
+
 
 # Initialize counters
 total_size = 0
