@@ -8,8 +8,8 @@ Parameters:
     the value of n for each round.
 
 Returns:
-    str: The name of the player who won the
-    most rounds, or None if there's a tie.
+    str: The name of the player who won the most rounds,
+    or None if there's a tie.
 """
 
 
@@ -32,14 +32,14 @@ def sieve_of_eratosthenes(limit):
 
 def isWinner(x, nums):
     """Determines the winner of `x` rounds based on the game rules."""
-    # Handle invalid inputs
+    # Validate inputs
     if not isinstance(
         x,
         int) or x <= 0 or not nums or not all(
         isinstance(
             n,
             int) and n > 0 for n in nums):
-        return None  # Return None for invalid inputs
+        return None
 
     max_n = max(nums)
     prime_count = sieve_of_eratosthenes(max_n)
@@ -49,9 +49,9 @@ def isWinner(x, nums):
 
     # Process each round
     for n in nums:
-        if prime_count[n] % 2 == 1:
+        if prime_count[n] % 2 == 1:  # Maricount is odd
             maria_wins += 1
-        else:
+        else:  # Ben wins the round otherwise
             ben_wins += 1
 
     # Determine the overall winner
