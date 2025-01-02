@@ -4,12 +4,12 @@ Function that simulates the Prime Game between Maria and Ben.
 
 Parameters:
     x (int): Number of rounds to play.
-    nums (list of int): List of integers represent
-    ing the value of n for each round.
+    nums (list of int): List of integ
+    ers representing the value of n for each round.
 
 Returns:
-    str: The name of the player who won t
-    he most rounds, or None if there's a tie.
+    str: The name of the player who won the
+    most rounds, or None if there's a tie.
 """
 
 
@@ -32,9 +32,8 @@ def sieve_of_eratosthenes(limit):
 
 def isWinner(x, nums):
     """Determines the winner of `x` rounds based on the game rules."""
-    # Handle invalid inputs and early exit cases
-    if x <= 0 or not nums or any(n <= 0 for n in nums):
-        return None
+    if x == 0:
+        return None  # No rounds to play, return None
 
     max_n = max(nums)
     prime_count = sieve_of_eratosthenes(max_n)
@@ -44,9 +43,9 @@ def isWinner(x, nums):
 
     # Process each round
     for n in nums:
-        if prime_count[n] % 2 == 1:  # Maria wins thet is odd
+        if prime_count[n] % 2 == 1:
             maria_wins += 1
-        else:  # Ben wins the round otherwise
+        else:
             ben_wins += 1
 
     # Determine the overall winner
