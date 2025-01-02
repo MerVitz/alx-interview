@@ -32,8 +32,14 @@ def sieve_of_eratosthenes(limit):
 
 def isWinner(x, nums):
     """Determines the winner of `x` rounds based on the game rules."""
-    if x == 0:
-        return None  # No rounds to play, return None
+    # Handle invalid inputs
+    if not isinstance(
+        x,
+        int) or x <= 0 or not nums or not all(
+        isinstance(
+            n,
+            int) and n > 0 for n in nums):
+        return None  # Return None for invalid inputs
 
     max_n = max(nums)
     prime_count = sieve_of_eratosthenes(max_n)
