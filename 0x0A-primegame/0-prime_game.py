@@ -8,8 +8,8 @@ Parameters:
     the value of n for each round.
 
 Returns:
-    str: The name of the player who won the most
-    rounds, or None if there's a tie.
+    str: The name of the player who won the most rounds,
+    :or None if there's a tie.
 """
 
 
