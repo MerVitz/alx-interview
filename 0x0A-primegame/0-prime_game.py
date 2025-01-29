@@ -34,7 +34,7 @@ def sieve_of_eratosthenes(limit):
 
 def isWinner(x, nums):
     """Determines the winner of `x` rounds based on the game rules."""
-    if x == 0:
+    if x <= 0:
         return None  # No rounds to play, return None
 
     max_n = max(nums)
